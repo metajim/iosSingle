@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             Appearing="ContentPage_Appearing"
+             Title="Field Entry"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             x:Class="ADSFieldEntry.CollectData">
+    
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Edit" x:Name="cmdEdit" Clicked="Edit_Clicked" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        
+        <Grid x:Name="viewMain">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+
+            <StackLayout x:Name="viewLogin" Margin="5,10,5,5" Grid.Row="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Entry x:Name="txtEmployee" HorizontalOptions="FillAndExpand" />
+                <Button Text="Login" HorizontalOptions="End" FontSize="Medium" Clicked="LoginEmp_Clicked"/>
+            </StackLayout>
+
+
+            <StackLayout x:Name="viewMessage" Orientation="Vertical" HorizontalOptions="FillAndExpand" Grid.Row="1" >
+                <Label x:Name="lblEmployeeName" Text="_" HorizontalOptions="FillAndExpand" BackgroundColor="Orange" TextColor="White" FontSize="Medium" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                    <Label x:Name="lblProfile" Text="_" BackgroundColor="Green" TextColor="White" HorizontalOptions="FillAndExpand" FontSize="Medium"/>
+                    <Button Text="Select Profile" Clicked="SelectProfile_Clicked" HorizontalOptions="End"/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout x:Name="viewScan" IsVisible="False" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,10,0,0" Grid.Row="2">
+                <Label Text="Scan" HorizontalOptions="FillAndExpand" BackgroundColor="Green" TextColor="White" FontSize="Large" />
+                <Grid  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="In/Out" HorizontalOptions="Start" FontSize="Large" Clicked="Scan_Clicked" />
+                    <Label Grid.Column="1" x:Name="txtScanIn" Text="--:--" HorizontalOptions="Center" FontSize="Large" />
+                    <Label Grid.Column="2" x:Name="txtScanOut" Text="--:--" HorizontalOptions="Center" FontSize="Large" />
+                </Grid>
+            </StackLayout>
+
+
+
+            <StackLayout x:Name="viewBreak" IsVisible="False" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,10,0,0"  Grid.Row="3">
+                <Label Text="Break" HorizontalOptions="FillAndExpand" BackgroundColor="Green" TextColor="White" FontSize="Large" />
+                <Grid  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Break" HorizontalOptions="Start" FontSize="Large" Clicked="Break_Clicked" />
+                    <Label Grid.Column="1" x:Name="txtBreakIn" Text="--:--" HorizontalOptions="Center" FontSize="Large" />
+                    <Label Grid.Column="2" x:Name="txtBreakOut" Text="--:--" HorizontalOptions="Center" FontSize="Large" />
+                </Grid>
+            </StackLayout>
+
+            <StackLayout x:Name="viewLunch" IsVisible="False" Orientation="Vertical" HorizontalOptions="FillAndExpand" Margin="0,10,0,0"  Grid.Row="4">
+                <Label Text="Lunch" HorizontalOptions="FillAndExpand" BackgroundColor="Green" TextColor="White" FontSize="Large" />
+                <Grid  >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.Column="0" Text="Lunch" HorizontalOptions="Start" FontSize="Large" Clicked="Lunch_Clicked" />
+                    <Label Grid.Column="1" x:Name="txtLunchIn" Text="--:--" HorizontalOptions="Center" FontSize="Large" />
+                    <Label Grid.Column="2" x:Name="txtLunchOut" Text="--:--" HorizontalOptions="Center" FontSize="Large" />
+                </Grid>
+            </StackLayout>
+
+
+           
+        </Grid>
+        
+        
+        
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Settings"
+             x:Class="ADSFieldEntry.Settings">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0" Grid.Row="0" x:Name="viewPass" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="8*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="txtPassword" Margin="5,10,5,10" Grid.Column="0" Grid.Row="0" IsPassword="True" HorizontalOptions="FillAndExpand"/>
+                <Button x:Name="cmdOK" Text="OK" Margin="5,10,10,10" HorizontalOptions="End" Grid.Column="1" Grid.Row="0" Clicked="OK_Clicked" />
+                
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="1" x:Name="viewSettings" IsVisible="False" HorizontalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*" />
+                    <ColumnDefinition Width="5*" />
+                </Grid.ColumnDefinitions>
+                
+                <Label x:Name="lblCompanyID" Grid.Row="0" Grid.Column="0" FontSize="Medium" Text="Company ID" />
+                <Entry x:Name="txtCompanyID" Grid.Row="0" Grid.Column="1" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+
+                <Label x:Name="lblWebFolder" Grid.Row="1" Grid.Column="0" FontSize="Medium" Text="Web Folder" />
+                <Entry x:Name="txtWebFolder" Grid.Row="1" Grid.Column="1" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+
+                <Label x:Name="lblProbeName" Grid.Row="2" Grid.Column="0" FontSize="Medium" Text="Device Name" />
+                <Entry x:Name="txtProbeName" Grid.Row="2" Grid.Column="1" FontSize="Medium" HorizontalOptions="FillAndExpand" />
+
+                <Button x:Name="cmdSave" Margin="10,20,10,20" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="Center"  Clicked="Save_Clicked" Text="Save" FontSize="Medium" />
+
+            </Grid>
+            <Label x:Name="lblWipe" Grid.Row="2" Grid.Column="0" Text=" "/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

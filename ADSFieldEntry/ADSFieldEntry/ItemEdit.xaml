@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Event Edit"
+            Appearing="ContentPage_Appearing"
+             x:Class="ADSFieldEntry.ItemEdit">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+            <StackLayout Grid.Column="1" HorizontalOptions="CenterAndExpand">
+                <Label  x:Name="txtProfile" Text="{Binding m_Profile}" FontSize="Large" Margin="0,10,0,10"/>
+                <Label Text="Start Time"                   
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand" />
+                <Entry x:Name="txtStart" Text="{Binding m_StartView}" Keyboard="Numeric" TextChanged="txtStart_TextChanged"  HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"  FontSize="Medium" >
+                    
+                </Entry>
+
+                <Label Text="End Time"
+                    FontSize="Medium"
+                    HorizontalOptions="CenterAndExpand" />
+                <Entry x:Name="txtEnd" Text="{Binding m_EndView}" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center" FontSize="Medium" />
+
+
+                <Button HorizontalOptions="Center" Text="SAVE" Clicked="Save_Click" />
+            </StackLayout>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>
